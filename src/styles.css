@@ -105,8 +105,13 @@ kbd {
 .reviewer__field { width: 240px; }
 
 .loadbatch { position: relative; }
-/* Match the Reviewer ID input's height so the row bottom-aligns cleanly. */
-.loadbatch .btn { padding: 9px 16px; font-size: 14px; }
+/* All three controls in the row share one explicit height so they line up
+   exactly (bottom-aligned via .reviewer__row's align-items: flex-end). */
+.reviewer__row .field__input { height: 38px; }
+.loadbatch .btn {
+  height: 38px; padding: 0 16px; font-size: 14px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
 .loadbatch__menu, .session__actions .loadbatch__menu {
   position: absolute;
   right: 0; top: calc(100% + 6px);
@@ -351,7 +356,7 @@ kbd {
 /* info "i" button + CSV format help modal */
 .infobtn {
   flex-shrink: 0;
-  width: 36px; height: 36px; border-radius: 50%;
+  width: 38px; height: 38px; border-radius: 50%;
   border: 1px solid var(--line-strong); background: var(--surface);
   color: var(--ink-soft); cursor: pointer;
   font-family: Georgia, 'Times New Roman', serif; font-style: italic;
