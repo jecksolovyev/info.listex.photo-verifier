@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import type { SessionRecord } from '../db/schema'
 import { cumulativeStat, formatStat, statForSession, num } from '../stats'
+import { CsvFormatHelp } from './CsvFormatHelp'
 
 interface Props {
   userId: string
@@ -54,6 +55,8 @@ export function StartScreen({
             importing={importing}
             onLoadBatch={onLoadBatch}
           />
+
+          <CsvFormatInfo />
         </div>
         <span className="field__hint">Reviewer ID is saved on this browser · stamped onto every photo you review</span>
       </section>
@@ -123,6 +126,23 @@ function LoadBatchButton({
         {importing ? 'Importing…' : '⬆ Load batch CSV'}
       </button>
     </div>
+  )
+}
+
+function CsvFormatInfo() {
+  const [open, setOpen] = useState(false)
+  return (
+    <>
+      <button
+        className="infobtn"
+        onClick={() => setOpen(true)}
+        title="What CSV format does this expect?"
+        aria-label="Batch CSV format help"
+      >
+        i
+      </button>
+      {open && <CsvFormatHelp onClose={() => setOpen(false)} />}
+    </>
   )
 }
 
