@@ -1,0 +1,8 @@
+GoodId,Good_Name,GTIN,PhotoURI,PhotoId,PhotoType,PhotoDate,Flagged,UserId
+1001,Coca-Cola Zero 0.5L PET,4600000000017,https://icf.listex.info/orig/c4e3f212-031d-61bb-1f29-3e7e92dbee4a.png,5001,default,2025-01-10,NO,
+1001,Coca-Cola Zero 0.5L PET,4600000000017,https://icf.listex.info/orig/aaaa1111-0000-0000-0000-000000000001.png,5002,13,2025-01-11,NO,
+1002,"Lay's Sour Cream & Onion 140g",4600000000024,https://icf.listex.info/orig/aaaa1111-0000-0000-0000-000000000002.png,5003,default,2025-02-01,YES,anna
+1002,"Lay's Sour Cream & Onion 140g",4600000000024,https://icf.listex.info/orig/aaaa1111-0000-0000-0000-000000000003.png,5004,7,2025-02-02,NO,
+1003,Молоко 3.2% 1L,4600000000031,https://icf.listex.info/orig/aaaa1111-0000-0000-0000-000000000004.png,5005,default,2025-03-05,NO,
+1003,Молоко 3.2% 1L,4600000000031,https://icf.listex.info/orig/aaaa1111-0000-0000-0000-000000000005.png,5006,text,2025-03-06,NO,
+1004,Nutella Hazelnut Spread 350g,4600000000048,https://icf.listex.info/orig/aaaa1111-0000-0000-0000-000000000006.png,5007,default,,NO,

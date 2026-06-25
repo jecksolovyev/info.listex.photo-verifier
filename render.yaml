@@ -1,0 +1,18 @@
+# Render Blueprint — Visual Audit (Photo Verifier)
+# Browser-only static SPA (ADR-0001). No backend; photos load from listex URLs,
+# batches are loaded client-side, state lives in IndexedDB.
+services:
+  - type: web
+    name: photo-verifier
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: false
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+    # SPA fallback: every path serves index.html (two screens are app-state, no router).
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+
+# Editor / local tooling
+.idea/
+.claude/settings.local.json
+# Local MCP wiring — machine-specific absolute path, keep out of the public repo
+.mcp.json
+
+# Engineering skills (mattpocock/skills) — local tooling, not part of the app
+.agents/
